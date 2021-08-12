@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>profile/TabassumShaikh</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: #03072f;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 92%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 50px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('bghome.jpg') no-repeat center center/cover;
+    height: 650px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h2{
+    color:rgb(4, 2, 36);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    height:110px;
+    margin-top: -103px;
+
+}
+
+#intro span{
+    display:flex;
+  
+    color:rgb(78, 6, 6);
+    text-align:justify ;
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+    margin-left: 291px;
+    margin-right:-23px;
+    margin-top: -256px;
+    padding-top:-25px ;
+}
+#intro img{
+    max-width: 34%;
+    height: 308px;
+    
+    margin: 3px -64px;
+    border-radius: 28px;
+    border: 2px solid brown;
+}
+/* About Section */
+#hobbies{
+    margin: 34px;
+    display: flex;
+    background: url('bgabout.jpg') no-repeat center center/cover;
+    opacity: 0.9;
+
+}
+#hobbies .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #ebf1f3;
+    margin-bottom: 20px;
+}
+
+#hobbies .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#hobbies .box p{
+    font-family: 'Bree Serif', serif;
+    text-align: justify;
+
+} 
+
+/* blog Section */
+#blog{ 
+    position: relative;
+}
+
+#blog::before{
+ content: "";
+ position: absolute;
+ background: url('bgblog.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-item{
+    padding: 34px;
+}
+
+#blogs img{
+    height: 450px;
+}
+
+#blog p a{
+    align-items: center;
+    padding: 34px;
+    justify-content: center;
+    text-align: center;
+    margin-right: 70px;
+
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('bgcontact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.center{
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logoicon.png" alt="">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#blog">Blog</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2 class="h-primary">Tabassum Shaikh</h1>
+        <div id="intro">
+            <img src="profile_img.jpg">
+            <span>I am a student of Electronics and Telecommunication engineering at Vidyalankar intitute of technology.  Currently in the 3rd year of engineering, I am pursuing an internship at Lets Grow More to enhance my Web Development skills and working profficiency. </span>
+        </div>
+        
+       
+        
+    </section>
+
+    <section id="about">
+        <h1 class="h-primary center">About</h1>
+        <div id="hobbies">
+            <div class="box">
+                <img src="read.jpg" alt="">
+                <h2 class="h-secondary center">Reading</h2>
+                <p class="center">Reading a a hobby every individual should posses.  Reading gives one peace of mind and drags you out of your stressful environment.
+                    its one of the best ways to spend your Me-time and explore your own interests and goodness.  Your interest into literature drives you more closer to exploring the creation of various authors around the globe.
+                    
+
+                </p>
+            </div>
+            <div class="box">
+                <img src="blog.png" alt="">
+                <h2 class="h-secondary center">Blogging</h2>
+                <p class="center">Blogging is a hobby I have developed during the pandemic. Sitting at home and transforming your thoughts into words is in a way a type of mindfreshening activity.
+                      On top of this, it enhances your imagination and creativity skills as well.  It has helped me connect with the outer world as well as got me aware about the current affairs and world issues as well which is a  very must requirement for every individual.  </p>
+            </div>
+            <div class="box">
+                <img src="paint.jpg" alt="">
+                <h2 class="h-secondary center">Painting</h2>
+                <p class="center">Every person has a little bit of art inside themselves.  Practising art requires lot of attention, imagination, creativity and enthusiasm.
+                    Sounds too tough?  Well! Its not. It just requires a keen interest into art that drives you into the artistic world.  The beauty of colors or the canvas strives to fill colors into yoir sressful and faded mind.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="blog">
+        <h1 class="h-primary center">My blog page</h1>
+        <div id="blogs">
+            <div class="blog-item">
+                <img src="blog1.png" alt="">
+            </div>
+            <div class="blog-item">
+                <img src="blog2.png" alt="">
+            </div>
+          
+        </div>
+        <p><a class="center" href="https://mymindfulmag.blogspot.com/">www.mymindfulmag.blogspot.com</a></p>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="" method="post" id="userform">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+					<button type="submit" class="full" onclick="thanks()">Submit</button>
+                    
+				</div>
+                <div class="form-group">
+                    <p id="TY"></p>
+                </div>
+            
+            </form>
+            <script>
+                function thanks() {
+                   
+                  document.getElementById("TY").innerHTML = "Thank You!";
+                }
+            </script>
+        </div>
+    </section>
+
+    
+</body>
+
+</html>
